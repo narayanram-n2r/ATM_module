@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="j1.js"></script>
-<style>
+    <head>
+     
+      <style>
+        
 body {
     background-color:#fff;
     margin-left: calc(50% - 175px);
@@ -1163,22 +1163,29 @@ top: 0;
     border: 1px solid;
     font-size: 13px;
 }
-</style>
-</head>
-<body>
-
-<link href='https://fonts.googleapis.com/css?family=Orbitron&text=0123456789:AMP' rel='stylesheet' type='text/css'>
+      </style>
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+     
+        
+    </head>
+    <body>
+    
+  
+  <!--   -->
+    
+    <link href='https://fonts.googleapis.com/css?family=Orbitron&text=0123456789:AMP' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <div id="atmmac">
-    <!-- <div id="ac">
+    <div id="ac">
         <div id="inner"></div>
         <div id="temp"><p id="t1">20°</p></div>
         <div class="one" style="border-width:5px"><p id="one1""></p></div>
         <div id="acname"><p>VOLTAS</p></div>
-    </div> -->
+    </div>
     <div id="outer">
     <div id="camera"><div id="lens"></div>
         <div id="light"></div>
@@ -1192,7 +1199,7 @@ top: 0;
         <button id="b5"></button>
         <button id="b6"></button>
         
-    <p id="com1"><b>ABC ATM</b></p></div>
+    <p id="com1"><b>SBI ATM</b></p></div>
         <div class="screen">
         
         <div id="loading" >
@@ -1207,17 +1214,17 @@ top: 0;
             
         <div id="begin">
               
-              <p class="well1"> Welcome to ABC bank atm </p>
+              <p class="well1"> Welcome to SBI bank atm </p>
               <p class="well2">enter your DEMO Account no</p>
-                <input type="text" class="pass2" maxlength="8" id="pass2">
+                <input type="text" class="pass2" maxlength="8">
                 <button id="btne2" >Submit</button>
           </div>
           <div id="all">
           
           <div class="welcome">
-          <p class="well8">Welcome User!!</p>
-              <p class="well2">Please enter your PIN</p>
-                <input type="password" class="pass" maxlength="9" id="pass">
+          <p class="well8">Welcome Radhey !!</p>
+              <p class="well2">Please enter your password</p>
+                <input type="password" class="pass" maxlength="4" >
                 <button id="btne1" >Submit</button>
                 
           </div>
@@ -1243,14 +1250,14 @@ top: 0;
             <button id="det">DETAILS</button>
             <button id="otr">OTHERS</button>
              <center> <button id="backs">Cancel</button></center>
-            <p id="user23">              WELCOME<br>User</p>
+            <p id="user23">              🙏🏻WELCOME🙏🏻<br>Radhey</p>
          </div>
         
         <div id="deti">
             <table id="de">
                 <tr>
                     <td>Account Name:</td>
-                    <td>User </td>
+                    <td>Radhey </td>
                 </tr>
                 <tr>
                     <td style="text-align:right">Account No:</td>
@@ -1357,162 +1364,109 @@ top: 0;
           <div id="indicator2"> </div> <div id="cash"><div id="cash1"></div></div>
           
             <button id="help1" onclick="arr();">!</button>       
-  
-           <div id="keypad">
-            <div class="key" onclick="setValue(1)">1</div>
-            <div class="key" onclick="setValue(2)">2</div>
-            <div class="key" onclick="setValue(3)">3</div>
-            <div class="key" onclick="setValue(4)">4</div>
-            <div class="key" onclick="setValue(5)">5</div>
-            <div class="key" onclick="setValue(6)">6</div>
-            <div class="key" onclick="setValue(7)">7</div>
-            <div class="key" onclick="setValue(8)">8</div>
-            <div class="key" onclick="setValue(9)">9</div>
-            <div class="key" onclick="clearAll()">c</div>
-            <div class="key" onclick="setValue(0)">0</div>
-            <div class="key" onclick="deleteVal()">x</div>
+           <p id=author>©Designed by Radhey,Maglin,Pawan</p>
         </div>
-        </div>
-        
        </div>
        
         
         
+       <script >
+        alert("Account number:12345678 and password:9876 and click this icon for help(!)");
+        function showe() {
+  $("#begin").show();
+  $("#indicator2").hide();
+  $("#loading").hide();
+  $("#cash1").hide();
+  clearInterval(ani);
+}
+function showes() {
+  $("#result").show();
 
-</body>
+  $("#bill").hide();
+  $("#cash1").hide();
+  $("#indicator2").hide();
 
-<script>
-
-
-
-
-let inputID;
-function setValue(val){
-    $("#" + inputID).val($("#" + inputID).val() + val);
+  clearInterval(mani);
 }
 
-function deleteVal(){
-    let str = $("#" + inputID).val();
-    $("#" + inputID).val($("#" + inputID).val().slice(0, -1));
-}
+$(document).ready(function () {
+  ani = setInterval("showe()", 9000);
+  $("#loading").show();
 
-function clearAll(){
-    $("#" + inputID).val("");
-}
+  $("#begin").hide();
 
-function showe()
-{
-    // $("#begin").show();
-    $("#indicator2").hide();
-    $("#loading").hide();
-    $("#cash1").hide();
-    $(".welcome").show("fast");
-    inputID = "pass";
-    clearInterval(ani);
-}
-      function showes()
-{
-    $("#result").show();
+  $(".welcome").hide();
+  $("#success").hide();
+  $("#deti").hide();
+  $("#error").hide();
+  $("#chgpin").hide();
+  $("#balen").hide();
+  $("#witdrw").hide();
+  $("#result").hide();
+  $("#wrong").hide();
+  $("#depst").hide();
+  $("#result2").hide();
+  $("#final").hide();
+  $("#pinwrg").hide();
+  $("#beginwrg").hide();
+  $("#bill").hide();
+  $("#cash1").hide();
+  $("#indicator2").hide();
 
-    $("#bill").hide();
-    $("#cash1").hide();
-     $("#indicator2").hide();
-    
-    clearInterval(mani);
-} 
-            
-$(document).ready(function(){
-
-             
-             ani = setInterval("showe()", 3000);
-             $("#loading").show();
-             
-
- $("#begin").hide();
-    
-    $(".welcome").hide();
-   $("#success").hide ();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#chgpin").hide();
-    $("#balen").hide();
-    $("#witdrw").hide();
-    $("#result").hide();
-    $("#wrong").hide();
-    $("#depst").hide();
-    $("#result2").hide();
-    $("#final").hide();
-    $("#pinwrg").hide();
-    $("#beginwrg").hide();
-    $("#bill").hide();
-    $("#cash1").hide();
-     $("#indicator2").hide();
-    
-$("#btne2").click(function(){
-    
-        
-    var accno=12345678;
+  $("#btne2").click(function () {
+    var accno = 12345678;
     var accs = $(".pass2").val();
-    if(accno==accs)
-    {
-        $(".welcome").show("fast");
-         $("#begin").hide("fast");
-         $("#cash1").hide();
-          $("#indicator2").hide();
-         navigator.vibrate(100);
+    if (accno == accs) {
+      $(".welcome").show("fast");
+      $("#begin").hide("fast");
+      $("#cash1").hide();
+      $("#indicator2").hide();
+      navigator.vibrate(100);
+    } else {
+      $("#beginwrg").show("fast");
+      $("#begin").hide("fast");
+      $("#cash1").hide();
+      $("#indicator2").hide();
+      navigator.vibrate(100);
     }
-    else
-    {
-        $("#beginwrg").show("fast");
-        $("#begin").hide("fast");
-        $("#cash1").hide();
-         $("#indicator2").hide();
-        navigator.vibrate(100);
-    }
-});
-$("#bac4").click(function(){
+  });
+  $("#bac4").click(function () {
     $("#begin ").show();
-     $("#indicator2").hide();
-    $("#beginwrg").hide ();
+    $("#indicator2").hide();
+    $("#beginwrg").hide();
     $("#cash1").hide();
 
     navigator.vibrate(100);
-    });
-$("#btne1").click(function(){
-    var pin=1234;
+  });
+  $("#btne1").click(function () {
+    var pin = 9876;
 
     var pins = $(".pass").val();
-    if(pins==pin)
-    {
-        $("#success").show ();
-        $(".welcome").hide("fast");
-        $("#cash1").hide();
-         $("#indicator2").hide();
-        navigator.vibrate(100);
-        }
+    if (pins == pin) {
+      $("#success").show();
+      $(".welcome").hide("fast");
+      $("#cash1").hide();
+      $("#indicator2").hide();
+      navigator.vibrate(100);
+    } else {
+      $("#pinwrg").show();
+      $(".welcome").hide("fast");
+      $("#cash1").hide();
+      $("#indicator2").hide();
+      navigator.vibrate(100);
+    }
+  });
 
-    
-    else
-{
-    $("#pinwrg").show ();
-    $(".welcome").hide("fast");
-    $("#cash1").hide();
-     $("#indicator2").hide();
-    navigator.vibrate(100);
-}
-});
-
-$("#bac3").click(function(){
+  $("#bac3").click(function () {
     $(".welcome ").show();
-    
-    $("#pinwrg").hide ();
+
+    $("#pinwrg").hide();
     $("#cash1").hide();
-     $("#indicator2").hide();
+    $("#indicator2").hide();
     navigator.vibrate(100);
-    });
+  });
 
-
-$("#backs").click(function(){
+  $("#backs").click(function () {
     $(".welcome").hide();
     $("#success").hide();
     $("#deti").hide();
@@ -1526,17 +1480,11 @@ $("#backs").click(function(){
     $("#depst").hide("fast");
     $("#final").show();
     $("#cash1").hide();
-     $("#indicator2").hide();
+    $("#indicator2").hide();
     navigator.vibrate(100);
-    });
-    
+  });
 
-
-
-  
-  
-$("#det").click(function(){
-
+  $("#det").click(function () {
     $(".welcome").hide();
     $("#success").hide();
     $("#deti").show();
@@ -1550,29 +1498,28 @@ $("#det").click(function(){
     $("#result2").hide("fast");
     $("#final").hide();
     $("#cash1").hide();
-     $("#indicator2").hide();
-    
-    navigator .vibrate (100);
-$("#back").click(function(){
-    $(".welcome").hide();
-    $("#success").show();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#chgpin").hide();
-    $("#balen").hide();
-    $("#witdrw").hide();
-    $("#wrong").hide("fast");
-    $("#depst").hide("fast");
-    $("#result2").hide("fast");
-    $("#final").hide();
-    $("#cash1").hide();
-    $("#result").hide();
-     $("#indicator2").hide();
-    navigator .vibrate (100);
+    $("#indicator2").hide();
+
+    navigator.vibrate(100);
+    $("#back").click(function () {
+      $(".welcome").hide();
+      $("#success").show();
+      $("#deti").hide();
+      $("#error").hide();
+      $("#chgpin").hide();
+      $("#balen").hide();
+      $("#witdrw").hide();
+      $("#wrong").hide("fast");
+      $("#depst").hide("fast");
+      $("#result2").hide("fast");
+      $("#final").hide();
+      $("#cash1").hide();
+      $("#result").hide();
+      $("#indicator2").hide();
+      navigator.vibrate(100);
+    });
   });
-  
-  });
-$("#otr").click(function(){
+  $("#otr").click(function () {
     $(".welcome").hide();
     $("#success").hide();
     $("#deti").hide();
@@ -1586,28 +1533,27 @@ $("#otr").click(function(){
     $("#final").hide();
     $("#cash1").hide();
     $("#witdrw").hide();
-     $("#indicator2").hide();
-    navigator .vibrate (100);
-$("#back2").click(function(){
-    $(".welcome").hide();
-    $("#success").show();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#chgpin").hide();
-    $("#balen").hide();
-    $("#witdrw").hide();
-    $("#result").hide();
-    $("#wrong").hide("fast");
-    $("#depst").hide("fast");
-    $("#result2").hide("fast");
-    $("#final").hide();
-     $("#indicator2").hide();
-    $("#cash1").hide();
-    navigator .vibrate (100);
+    $("#indicator2").hide();
+    navigator.vibrate(100);
+    $("#back2").click(function () {
+      $(".welcome").hide();
+      $("#success").show();
+      $("#deti").hide();
+      $("#error").hide();
+      $("#chgpin").hide();
+      $("#balen").hide();
+      $("#witdrw").hide();
+      $("#result").hide();
+      $("#wrong").hide("fast");
+      $("#depst").hide("fast");
+      $("#result2").hide("fast");
+      $("#final").hide();
+      $("#indicator2").hide();
+      $("#cash1").hide();
+      navigator.vibrate(100);
+    });
   });
-  
-  });
-$("#cpin").click(function(){
+  $("#cpin").click(function () {
     $(".welcome").hide();
     $("#success").hide();
     $("#deti").hide();
@@ -1620,29 +1566,28 @@ $("#cpin").click(function(){
     $("#depst").hide("fast");
     $("#result2").hide("fast");
     $("#final").hide();
-     $("#indicator2").hide();
+    $("#indicator2").hide();
     $("#cash1").hide();
-    navigator .vibrate (100);
-$("#back3").click(function(){
-    $(".welcome").hide();
-    $("#success").show();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#balen").hide();
-    $("#chgpin").hide();
-    $("#result").hide();
-    $("#wrong").hide("fast");
-    $("#depst").hide("fast");
-    $("#result2").hide("fast");
-    $("#final").hide();
-    $("#cash1").hide();
-    $("#witdrw").hide();
-     $("#indicator2").hide();
-    navigator .vibrate (100);
+    navigator.vibrate(100);
+    $("#back3").click(function () {
+      $(".welcome").hide();
+      $("#success").show();
+      $("#deti").hide();
+      $("#error").hide();
+      $("#balen").hide();
+      $("#chgpin").hide();
+      $("#result").hide();
+      $("#wrong").hide("fast");
+      $("#depst").hide("fast");
+      $("#result2").hide("fast");
+      $("#final").hide();
+      $("#cash1").hide();
+      $("#witdrw").hide();
+      $("#indicator2").hide();
+      navigator.vibrate(100);
+    });
   });
-  
-  });
-$("#mst").click(function(){
+  $("#mst").click(function () {
     $(".welcome").hide();
     $("#success").hide();
     $("#deti").hide();
@@ -1655,32 +1600,31 @@ $("#mst").click(function(){
     $("#result2").hide("fast");
     $("#final").hide();
     $("#cash1").hide();
-    
-     $("#indicator2").hide();
+
+    $("#indicator2").hide();
     $("#witdrw").hide();
-    navigator .vibrate (100);
-$("#back4").click(function(){
-    $(".welcome").hide();
-    $("#success").show();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#balen").hide();
-    $("#chgpin").hide();
-    $("#witdrw").hide();
-    $("#result").hide();
-    $("#wrong").hide("fast");
-    $("#depst").hide("fast");
-    $("#result2").hide("fast");
-    $("#final").hide();
-    $("#cash1").hide();
-     $("#indicator2").hide();
-    
-    navigator .vibrate (100);
+    navigator.vibrate(100);
+    $("#back4").click(function () {
+      $(".welcome").hide();
+      $("#success").show();
+      $("#deti").hide();
+      $("#error").hide();
+      $("#balen").hide();
+      $("#chgpin").hide();
+      $("#witdrw").hide();
+      $("#result").hide();
+      $("#wrong").hide("fast");
+      $("#depst").hide("fast");
+      $("#result2").hide("fast");
+      $("#final").hide();
+      $("#cash1").hide();
+      $("#indicator2").hide();
+
+      navigator.vibrate(100);
+    });
   });
-  
-  });
-  
-$("#wdr").click(function(){
+
+  $("#wdr").click(function () {
     $(".welcome").hide();
     $("#success").hide();
     $("#deti").hide();
@@ -1694,125 +1638,116 @@ $("#wdr").click(function(){
     $("#result2").hide("fast");
     $("#final").hide();
     $("#cash1").hide();
-    inputID = "witdrwno";
-    
-     $("#indicator2").hide();
-    navigator .vibrate (100);
-$("#back5").click(function(){
-    $(".welcome").hide();
-    $("#success").show();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#balen").hide();
-    $("#chgpin").hide();
-    $("#witdrw").hide();
-    $("#result").hide();
-    $("#wrong").hide("fast");
-    $("#depst").hide("fast");
-    $("#result2").hide("fast");
-    $("#final").hide();
-     $("#indicator2").hide();
-    
-    $("#cash1").hide();
-    navigator .vibrate (100);
+
+    $("#indicator2").hide();
+    navigator.vibrate(100);
+    $("#back5").click(function () {
+      $(".welcome").hide();
+      $("#success").show();
+      $("#deti").hide();
+      $("#error").hide();
+      $("#balen").hide();
+      $("#chgpin").hide();
+      $("#witdrw").hide();
+      $("#result").hide();
+      $("#wrong").hide("fast");
+      $("#depst").hide("fast");
+      $("#result2").hide("fast");
+      $("#final").hide();
+      $("#indicator2").hide();
+
+      $("#cash1").hide();
+      navigator.vibrate(100);
     });
-    });
-$("#btns2").click(function(){
-    
+  });
+  $("#btns2").click(function () {
     $("#wdt3").empty();
     $("#wdt5").empty();
     $("#wdt7").empty();
-    var bal=50000;
+    var bal = 50000;
     var str = $("#witdrwno").val();
-    if(bal>=str)
-    {
-    var sub= bal-str;
-    if(str=="")
-    {
-        str=0;
-    }
-    mani = setInterval("showes()", 7000);
-             $("#bill").show();
-             $("#cash1").show();
-              $("#indicator2").show();
-    $("#wdt3").append(str);
-    $("#wdt5").append(sub);
-    $("#wdt7").append(bal);
-    $(".welcome").hide();
-    $("#success").hide();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#chgpin").hide();
-    $("#balen").hide();
-    $("#witdrw").hide();
-    $("#result").hide();
-    $("#wrong").hide("fast");
-    $("#depst").hide("fast");
-    $("#result2").hide("fast");
-    $("#final").hide();
-    navigator.vibrate(100);
-    
-$("#back6").click(function(){
-    $(".welcome").hide();
-    $("#success").hide();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#balen").hide();
-    $("#chgpin").hide();
-    $("#witdrw").hide();
-    $("#result").hide();
-    $("#wrong").hide("fast");
-    $("#depst").hide("fast");
-    $("#result2").hide("fast");
-    $("#final").show();
-    $("#cash1").hide();
-     $("#indicator2").hide();
-    navigator.vibrate(100);
-    });
-    }
-    else
-    {
-         $(".welcome").hide();
-    $("#success").hide();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#chgpin").hide();
-    $("#balen").hide();
-    $("#witdrw").hide();
-    $("#wrong").show();
-    $("#result").hide("fast");
-    $("#final").hide();
-    $("#cash1").hide();
-    $("#depst").hide("fast");
-    $("#result2").hide("fast");
-     $("#indicator2").hide();
-    
-    navigator.vibrate(100);
-    
-$("#back7").click(function(){
-    $(".welcome").hide();
-    $("#success").hide();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#balen").hide();
-    $("#chgpin").hide();
-    $("#witdrw").show ();
-    $("#result").hide();
-    $("#wrong").hide("fast");
-    $("#depst").hide("fast");
-    $("#result2").hide("fast");
-    $("#final").hide();
-     $("#indicator2").hide();
-    
-    
-    $("#cash1").hide();
-    navigator.vibrate(100);
-    
-    });
-    }
+    if (bal >= str) {
+      var sub = bal - str;
+      if (str == "") {
+        str = 0;
+      }
+      mani = setInterval("showes()", 7000);
+      $("#bill").show();
+      $("#cash1").show();
+      $("#indicator2").show();
+      $("#wdt3").append(str);
+      $("#wdt5").append(sub);
+      $("#wdt7").append(bal);
+      $(".welcome").hide();
+      $("#success").hide();
+      $("#deti").hide();
+      $("#error").hide();
+      $("#chgpin").hide();
+      $("#balen").hide();
+      $("#witdrw").hide();
+      $("#result").hide();
+      $("#wrong").hide("fast");
+      $("#depst").hide("fast");
+      $("#result2").hide("fast");
+      $("#final").hide();
+      navigator.vibrate(100);
 
+      $("#back6").click(function () {
+        $(".welcome").hide();
+        $("#success").hide();
+        $("#deti").hide();
+        $("#error").hide();
+        $("#balen").hide();
+        $("#chgpin").hide();
+        $("#witdrw").hide();
+        $("#result").hide();
+        $("#wrong").hide("fast");
+        $("#depst").hide("fast");
+        $("#result2").hide("fast");
+        $("#final").show();
+        $("#cash1").hide();
+        $("#indicator2").hide();
+        navigator.vibrate(100);
+      });
+    } else {
+      $(".welcome").hide();
+      $("#success").hide();
+      $("#deti").hide();
+      $("#error").hide();
+      $("#chgpin").hide();
+      $("#balen").hide();
+      $("#witdrw").hide();
+      $("#wrong").show();
+      $("#result").hide("fast");
+      $("#final").hide();
+      $("#cash1").hide();
+      $("#depst").hide("fast");
+      $("#result2").hide("fast");
+      $("#indicator2").hide();
+
+      navigator.vibrate(100);
+
+      $("#back7").click(function () {
+        $(".welcome").hide();
+        $("#success").hide();
+        $("#deti").hide();
+        $("#error").hide();
+        $("#balen").hide();
+        $("#chgpin").hide();
+        $("#witdrw").show();
+        $("#result").hide();
+        $("#wrong").hide("fast");
+        $("#depst").hide("fast");
+        $("#result2").hide("fast");
+        $("#final").hide();
+        $("#indicator2").hide();
+
+        $("#cash1").hide();
+        navigator.vibrate(100);
+      });
+    }
   });
-$("#dep").click(function(){
+  $("#dep").click(function () {
     $(".welcome").hide();
     $("#success").hide();
     $("#deti").hide();
@@ -1826,43 +1761,41 @@ $("#dep").click(function(){
     $("#result2").hide("fast");
     $("#final").hide();
     $("#cash1").hide();
-     $("#indicator2").hide();
-    inputID = "depstno";
-    
-    navigator .vibrate (100);
-          
-$("#back8").click(function(){
-    $(".welcome").hide();
-    $("#success").show();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#balen").hide();
-    $("#chgpin").hide();
-    $("#witdrw").hide();
-    $("#result").hide();
-    $("#wrong").hide("fast");
-    $("#depst").hide("fast");
-    $("#result2").hide("fast");
-    $("#final").hide();
-    $("#cash1").hide();
-    
-     $("#indicator2").hide();
-    navigator .vibrate (100);
+    $("#indicator2").hide();
+
+    navigator.vibrate(100);
+
+    $("#back8").click(function () {
+      $(".welcome").hide();
+      $("#success").show();
+      $("#deti").hide();
+      $("#error").hide();
+      $("#balen").hide();
+      $("#chgpin").hide();
+      $("#witdrw").hide();
+      $("#result").hide();
+      $("#wrong").hide("fast");
+      $("#depst").hide("fast");
+      $("#result2").hide("fast");
+      $("#final").hide();
+      $("#cash1").hide();
+
+      $("#indicator2").hide();
+      navigator.vibrate(100);
     });
-    });
-$("#bt3").click(function(){
+  });
+  $("#bt3").click(function () {
     $("#dep11").empty();
     $("#dep9").empty();
     $("#dep13").empty();
     $("#cash1").hide();
-     $("#indicator2").hide();
-    var bal1=50000;
+    $("#indicator2").hide();
+    var bal1 = 50000;
     var str1 = $("#depstno").val();
-    
-    var sub1= parseInt(bal1) + parseInt(str1);
-    if(str1=="")
-    {
-        str1=0;
+
+    var sub1 = parseInt(bal1) + parseInt(str1);
+    if (str1 == "") {
+      str1 = 0;
     }
     $("#dep11").append(str1);
     $("#dep9").append(sub1);
@@ -1880,37 +1813,31 @@ $("#bt3").click(function(){
     $("#depst").hide("fast");
     $("#final").hide();
     $("#cash1").hide();
- $("#indicator2").hide();
+    $("#indicator2").hide();
     navigator.vibrate(100);
-    
-$("#back9").click(function(){
-    $(".welcome").hide();
-    $("#success").hide();
-    $("#deti").hide();
-    $("#error").hide();
-    $("#balen").hide();
-    $("#chgpin").hide();
-    $("#witdrw").hide();
-    $("#result").hide();
-    $("#wrong").hide("fast");
-    $("#result2").hide("fast");
-    $("#depst").hide("fast");
-    $("#final").show();
-    $("#cash1").hide();
-     $("#indicator2").hide();
-    navigator.vibrate(100);
+
+    $("#back9").click(function () {
+      $(".welcome").hide();
+      $("#success").hide();
+      $("#deti").hide();
+      $("#error").hide();
+      $("#balen").hide();
+      $("#chgpin").hide();
+      $("#witdrw").hide();
+      $("#result").hide();
+      $("#wrong").hide("fast");
+      $("#result2").hide("fast");
+      $("#depst").hide("fast");
+      $("#final").show();
+      $("#cash1").hide();
+      $("#indicator2").hide();
+      navigator.vibrate(100);
     });
-    
-
   });
-
 });
-function arr()
-{
-    window .alert("Account number:12345678                      Pin number:1234");
-    
+function arr() {
+  window.alert("Account number:12345678                      Pin number:9876");
 }
-
-
-</script>
+       </script>        
+    </body>
 </html>
